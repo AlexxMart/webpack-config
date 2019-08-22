@@ -1,0 +1,9 @@
+@import './helpers/mixins-flexbox';
+@import './helpers/mixins-media-queries';
+@import './helpers/variables';
+
+html,
+body {
+  background-color: #232323;
+  margin: 0;
+}
