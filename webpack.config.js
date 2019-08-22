@@ -21,13 +21,17 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'bundle'),
-    filename: 'index.js',
+    filename: '[name].min.js',
   },
   module: {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader?sourceMap',
+        ],
       },
       {
         test: /\.html$/,
