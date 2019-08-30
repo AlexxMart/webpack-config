@@ -2,6 +2,17 @@
 @import 'helpers/mixins-media-queries';
 @import 'helpers/variables';
 
+/*
+  There is a way to dynamically change the font-size depending on the screen size without the need of media queries with the following formula:
+  
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+  Examnple:
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+  More details here: https://css-tricks.com/snippets/css/fluid-typography/
+*/
+
 html,
 body {
   background-color: #232323;
