@@ -10,6 +10,19 @@ $screen-lg-desktop:     1200px
 $big-screen:            1440px
 $screen-xlg-desktop:    2440px
 
+
+>>>>>>>>>>>>>>>>> Usage Example:
+
+h1 {
+  color: red;
+  font-size: 30px;
+
+  @include phone {
+    font-size: 20px;
+  }
+}
+
+This will save you the use of declaring mediaqueries in every file, you can declare the specific style for each size in the element's property list
 */
 
 @mixin small-phone {
